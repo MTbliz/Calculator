@@ -1,8 +1,6 @@
 package com.mt.calculator.dao;
 
-import com.mt.calculator.entity.Apply;
-import com.mt.calculator.entity.Instruction;
-import com.mt.calculator.entity.Sum;
+import com.mt.calculator.entity.*;
 import com.mt.calculator.exception.WrongInstructionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,7 +15,7 @@ class InstructionMapperTest {
 
         Instruction result = instructionMapper.mapToInstruction("apply", 2);
 
-        Assertions.assertEquals(apply.getClass(), Apply.class);
+        Assertions.assertEquals(apply.getClass(), result.getClass());
         Assertions.assertEquals(apply.getNumber(), result.getNumber());
     }
 
@@ -25,10 +23,40 @@ class InstructionMapperTest {
     void shouldMapToSum() throws WrongInstructionException {
         Instruction sum = new Sum(2);
 
-        Instruction result = instructionMapper.mapToInstruction("apply", 2);
+        Instruction result = instructionMapper.mapToInstruction("add", 2);
 
-        Assertions.assertEquals(sum.getClass(), Sum.class);
+        Assertions.assertEquals(sum.getClass(), result.getClass());
         Assertions.assertEquals(sum.getNumber(), result.getNumber());
+    }
+
+    @Test
+    void shouldMapToSubtraction() throws WrongInstructionException {
+        Instruction subtraction = new Subtraction(2);
+
+        Instruction result = instructionMapper.mapToInstruction("subtract", 2);
+
+        Assertions.assertEquals(subtraction.getClass(), result.getClass());
+        Assertions.assertEquals(subtraction.getNumber(), result.getNumber());
+    }
+
+    @Test
+    void shouldMapToDivision() throws WrongInstructionException {
+        Instruction division = new Division(2);
+
+        Instruction result = instructionMapper.mapToInstruction("divide", 2);
+
+        Assertions.assertEquals(division.getClass(), result.getClass());
+        Assertions.assertEquals(division.getNumber(), result.getNumber());
+    }
+
+    @Test
+    void shouldMapToMultiplication() throws WrongInstructionException {
+        Instruction multiplication = new Multiplication(2);
+
+        Instruction result = instructionMapper.mapToInstruction("multiply", 2);
+
+        Assertions.assertEquals(multiplication.getClass(), result.getClass());
+        Assertions.assertEquals(multiplication.getNumber(), result.getNumber());
     }
 
     @Test

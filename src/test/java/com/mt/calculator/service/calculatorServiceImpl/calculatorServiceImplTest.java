@@ -6,7 +6,7 @@ import com.mt.calculator.entity.Apply;
 import com.mt.calculator.entity.Division;
 import com.mt.calculator.entity.Instruction;
 import com.mt.calculator.entity.Sum;
-import com.mt.calculator.exception.LackOfApplyInstructionException;
+import com.mt.calculator.exception.MissingApplyInstructionException;
 import com.mt.calculator.exception.WrongInstructionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,7 @@ class calculatorServiceImplTest {
     CalculatorServiceImpl calculatorService = new CalculatorServiceImpl(instructionsFileReader);
 
     @Test
-    void shouldCalculate() throws WrongInstructionException, LackOfApplyInstructionException {
+    void shouldCalculate() throws WrongInstructionException, MissingApplyInstructionException {
         List<Instruction> instructions = new ArrayList<>();
         Instruction sum = new Sum(8);
         Instruction division = new Division(2);
@@ -40,7 +40,7 @@ class calculatorServiceImplTest {
     }
 
     @Test
-    void shouldThrowLackOfApplyInstructionException() throws WrongInstructionException {
+    void shouldThrowMissingApplyInstructionException() throws WrongInstructionException {
         List<Instruction> instructions = new ArrayList<>();
         Instruction sum = new Sum(8);
         Instruction division = new Division(2);
@@ -48,7 +48,7 @@ class calculatorServiceImplTest {
         instructions.add(division);
         when(instructionsFileReader.readFile()).thenReturn(instructions);
 
-        Assertions.assertThrows(LackOfApplyInstructionException.class, () -> {
+        Assertions.assertThrows(MissingApplyInstructionException.class, () -> {
             calculatorService.calculate();
         });
     }
