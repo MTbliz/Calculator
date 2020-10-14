@@ -1,11 +1,11 @@
 package com.mt.calculator.dao;
 
 import com.mt.calculator.entity.*;
-import com.mt.calculator.exception.WrongOperationException;
+import com.mt.calculator.exception.WrongInstructionException;
 
 public class InstructionMapper {
 
-    public Instruction mapToInstruction(String instructionName, double number) throws WrongOperationException {
+    public Instruction mapToInstruction(String instructionName, double number) throws WrongInstructionException {
 
         Instruction instruction;
 
@@ -31,7 +31,7 @@ public class InstructionMapper {
                 break;
             }
             default: {
-                throw new WrongOperationException(instructionName);
+                throw new WrongInstructionException(instructionName);
             }
         }
         return instruction;

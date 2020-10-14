@@ -3,7 +3,7 @@ package com.mt.calculator.dao.fileReaderImpl;
 import com.mt.calculator.dao.InstructionMapper;
 import com.mt.calculator.dao.InstructionsFileReader;
 import com.mt.calculator.entity.Instruction;
-import com.mt.calculator.exception.WrongOperationException;
+import com.mt.calculator.exception.WrongInstructionException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -20,12 +20,12 @@ public class InstructionsFileReaderImpl implements InstructionsFileReader {
     private static final String FILE_NAME = "src/main/resources/instructions.txt";
 
     @Override
-    public List<Instruction> readFile() {
+    public List<Instruction> readFile() throws WrongInstructionException {
         List<Instruction> instructions = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
-            Instruction instruction = null;
+            Instruction instruction;
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(SEPARATOR);
                 String instructionName = row[0];
@@ -33,7 +33,7 @@ public class InstructionsFileReaderImpl implements InstructionsFileReader {
                 instruction = instructionMapper.mapToInstruction(instructionName, number);
                 instructions.add(instruction);
             }
-        } catch (IOException | WrongOperationException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return instructions;

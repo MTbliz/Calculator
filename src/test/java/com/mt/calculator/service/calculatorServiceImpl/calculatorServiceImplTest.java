@@ -6,6 +6,8 @@ import com.mt.calculator.entity.Apply;
 import com.mt.calculator.entity.Division;
 import com.mt.calculator.entity.Instruction;
 import com.mt.calculator.entity.Sum;
+import com.mt.calculator.exception.LackOfApplyInstructionException;
+import com.mt.calculator.exception.WrongInstructionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +24,7 @@ class calculatorServiceImplTest {
     CalculatorServiceImpl calculatorService = new CalculatorServiceImpl(instructionsFileReader);
 
     @Test
-    void shouldCalculate() {
+    void shouldCalculate() throws WrongInstructionException, LackOfApplyInstructionException {
         List<Instruction> instructions = new ArrayList<>();
         Instruction sum = new Sum(8);
         Instruction division = new Division(2);
@@ -35,6 +37,19 @@ class calculatorServiceImplTest {
         double result = calculatorService.calculate();
 
         Assertions.assertEquals(5, result);
+    }
 
+    @Test
+    void shouldThrowLackOfApplyInstructionException() throws WrongInstructionException {
+        List<Instruction> instructions = new ArrayList<>();
+        Instruction sum = new Sum(8);
+        Instruction division = new Division(2);
+        instructions.add(sum);
+        instructions.add(division);
+        when(instructionsFileReader.readFile()).thenReturn(instructions);
+
+        Assertions.assertThrows(LackOfApplyInstructionException.class, () -> {
+            calculatorService.calculate();
+        });
     }
 }

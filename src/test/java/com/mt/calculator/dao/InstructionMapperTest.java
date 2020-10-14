@@ -3,7 +3,7 @@ package com.mt.calculator.dao;
 import com.mt.calculator.entity.Apply;
 import com.mt.calculator.entity.Instruction;
 import com.mt.calculator.entity.Sum;
-import com.mt.calculator.exception.WrongOperationException;
+import com.mt.calculator.exception.WrongInstructionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class InstructionMapperTest {
     InstructionMapper instructionMapper = new InstructionMapper();
 
     @Test
-    void shouldMapToApply() throws WrongOperationException {
+    void shouldMapToApply() throws WrongInstructionException {
         Instruction apply = new Apply(2);
 
         Instruction result = instructionMapper.mapToInstruction("apply", 2);
@@ -22,7 +22,7 @@ class InstructionMapperTest {
     }
 
     @Test
-    void shouldMapToSum() throws WrongOperationException {
+    void shouldMapToSum() throws WrongInstructionException {
         Instruction sum = new Sum(2);
 
         Instruction result = instructionMapper.mapToInstruction("apply", 2);
@@ -33,10 +33,8 @@ class InstructionMapperTest {
 
     @Test
     void shouldThrowWrongInstructionException() {
-        Assertions.assertThrows(WrongOperationException.class, () -> {
+        Assertions.assertThrows(WrongInstructionException.class, () -> {
             instructionMapper.mapToInstruction("wrongInstruction", 2);
         });
     }
-
-
 }

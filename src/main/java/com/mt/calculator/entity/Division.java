@@ -1,4 +1,5 @@
 package com.mt.calculator.entity;
+
 public class Division extends Instruction {
 
     public Division(double number) {

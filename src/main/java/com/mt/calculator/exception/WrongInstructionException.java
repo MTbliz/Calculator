@@ -1,7 +1,7 @@
 package com.mt.calculator.exception;
 
-public class WrongOperationException extends Exception {
-    public WrongOperationException(String instructionName) {
+public class WrongInstructionException extends Exception {
+    public WrongInstructionException(String instructionName) {
         super(String.format("Wrong operation provided: %s", instructionName));
     }
 }
