@@ -26,19 +26,16 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public double calculate() throws WrongInstructionException, MissingApplyInstructionException {
-        double initialNumber = 0;
         List<Instruction> instructionsList = instructionsFileReader.readFile();
         Instruction apply = instructionsList.stream()
                 .filter(i -> i instanceof Apply)
                 .findFirst()
                 .orElseThrow(() -> new MissingApplyInstructionException());
-        initialNumber = apply.getNumber();
         List<Instruction> instructionsWithoutApply = instructionsList.stream()
                 .filter(i -> !(i instanceof Apply))
                 .collect(Collectors.toList());
-        for (Instruction instruction : instructionsWithoutApply) {
-            initialNumber = instruction.calculate(initialNumber);
-        }
-        return initialNumber;
+        double result = instructionsWithoutApply.stream().reduce(apply.getNumber(), (subtotal, element) ->
+                        element.calculate(subtotal), Double::sum);
+        return result;
     }
 }

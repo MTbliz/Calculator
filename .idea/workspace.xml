@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77698240-210a-43cc-9d76-8f5e53dd0e7d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildApp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/buildApp.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mt/calculator/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mt/calculator/StartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mt/calculator/exception/LackOfApplyInstructionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mt/calculator/exception/MissingApplyInstructionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mt/calculator/service/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mt/calculator/service/CalculatorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mt/calculator/service/calculatorServiceImpl/CalculatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mt/calculator/service/calculatorServiceImpl/CalculatorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/instructions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/instructions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mt/calculator/dao/InstructionMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mt/calculator/dao/InstructionMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mt/calculator/service/calculatorServiceImpl/calculatorServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mt/calculator/service/calculatorServiceImpl/calculatorServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +59,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.calculatorServiceImplTest">
+  <component name="RunManager" selected="Application.StartApplication">
+    <configuration name="StartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mt.calculator.StartApplication" />
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mt.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InstructionMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
@@ -131,29 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="calculatorServiceImplTest.shouldThrowWrongInstructionException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mt.calculator.service.calculatorServiceImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mt.calculator.service.calculatorServiceImpl" />
-      <option name="MAIN_CLASS_NAME" value="com.mt.calculator.service.calculatorServiceImpl.calculatorServiceImplTest" />
-      <option name="METHOD_NAME" value="shouldThrowWrongInstructionException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StartApplication" />
         <item itemvalue="JUnit.calculatorServiceImplTest" />
         <item itemvalue="JUnit.InstructionMapperTest" />
         <item itemvalue="JUnit.InstructionMapperTest.shouldMapToDivision" />
         <item itemvalue="JUnit.InstructionMapperTest.shouldMapToSum" />
-        <item itemvalue="JUnit.calculatorServiceImplTest.shouldThrowWrongInstructionException" />
       </list>
     </recent_temporary>
   </component>
@@ -217,51 +205,61 @@
     </state>
     <state x="508" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602660670092" />
     <state x="2428" y="121" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602614655529" />
-    <state width="1860" height="268" key="GridCell.Tab.0.bottom" timestamp="1602700345772">
+    <state width="1860" height="330" key="GridCell.Tab.0.bottom" timestamp="1605809718133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602700345772" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602627235301" />
-    <state width="1860" height="268" key="GridCell.Tab.0.center" timestamp="1602700345772">
+    <state width="1860" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718133" />
+    <state width="1860" height="330" key="GridCell.Tab.0.center" timestamp="1605809718133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="268" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602700345772" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602627235301" />
-    <state width="1860" height="268" key="GridCell.Tab.0.left" timestamp="1602700345772">
+    <state width="1860" height="330" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718133" />
+    <state width="1860" height="330" key="GridCell.Tab.0.left" timestamp="1605809718133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="268" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602700345772" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602627235300" />
-    <state width="1860" height="268" key="GridCell.Tab.0.right" timestamp="1602700345772">
+    <state width="1860" height="330" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718133" />
+    <state width="1860" height="330" key="GridCell.Tab.0.right" timestamp="1605809718133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="268" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602700345772" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602627235301" />
-    <state width="1860" height="330" key="GridCell.Tab.1.bottom" timestamp="1602689789505">
+    <state width="1860" height="330" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718133" />
+    <state width="1860" height="330" key="GridCell.Tab.1.bottom" timestamp="1605809718134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602689789505" />
-    <state width="1860" height="330" key="GridCell.Tab.1.center" timestamp="1602689789505">
+    <state width="1860" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718134" />
+    <state width="1860" height="330" key="GridCell.Tab.1.center" timestamp="1605809718134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="330" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602689789505" />
-    <state width="1860" height="330" key="GridCell.Tab.1.left" timestamp="1602689789505">
+    <state width="1860" height="330" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718134" />
+    <state width="1860" height="330" key="GridCell.Tab.1.left" timestamp="1605809718133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="330" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602689789505" />
-    <state width="1860" height="330" key="GridCell.Tab.1.right" timestamp="1602689789505">
+    <state width="1860" height="330" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718133" />
+    <state width="1860" height="330" key="GridCell.Tab.1.right" timestamp="1605809718134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="330" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602689789505" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1602699712346">
+    <state width="1860" height="330" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605809718134" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1604233604094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602699712346" />
     <state x="2360" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602608518127" />
-    <state x="855" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1602700218513">
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604233604094" />
+    <state x="855" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1604233596447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="855" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602700218513" />
+    <state x="855" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602788780078" />
+    <state x="855" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604233596447" />
     <state x="755" y="223" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602669209228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -270,6 +268,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="366" y="199" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602674954879" />
+    <state x="666" y="135" key="refactoring.ChangeSignatureDialog" timestamp="1605808907943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="135" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605808907943" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602604128735">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
